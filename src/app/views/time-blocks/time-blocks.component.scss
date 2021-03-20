@@ -1,0 +1,14 @@
+.app-time-blocks {
+    td, th {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        text-align: center;
+    }
+    
+    div {
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        height: 100%;
+    }
+}

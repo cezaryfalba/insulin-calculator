@@ -1,0 +1,60 @@
+<h1>Blok Czasowy</h1>
+
+<a [routerLink]="['../']">Wstecz</a>
+
+<form [formGroup]="blockForm">
+    <h2>Przedział Czasowy</h2>
+    <mat-form-field>
+        <mat-label>Od</mat-label>
+        <input matInput placeholder="Od" formControlName="timeFrom" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Do</mat-label>
+        <input matInput placeholder="Do" formControlName="timeTo" />
+    </mat-form-field>
+
+    <h2>Zakres Pożądany</h2>
+    <mat-form-field>
+        <mat-label>Od</mat-label>
+        <input matInput placeholder="Od" formControlName="rangeRequiredFrom" />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Do</mat-label>
+        <input matInput placeholder="Do" formControlName="rangeRequiredTo" />
+    </mat-form-field>
+
+    <h2>Współczynnik Węglowodanowy</h2>
+    <mat-form-field>
+        <mat-label>Ile</mat-label>
+        <input
+            matInput
+            placeholder="Ile"
+            formControlName="carbohydrateRatioAmount"
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Dla</mat-label>
+        <input
+            matInput
+            placeholder="Dla"
+            formControlName="carbohydrateRatioFor"
+        />
+    </mat-form-field>
+
+    <h2>Wrażliwość Na Insulinę</h2>
+    <mat-form-field>
+        <mat-label>Ile</mat-label>
+        <input
+            matInput
+            placeholder="Ile"
+            formControlName="insulinSensitivityAmount"
+        />
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput disabled value="mg/dl" />
+    </mat-form-field>
+</form>

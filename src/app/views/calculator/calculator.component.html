@@ -1,0 +1,76 @@
+<section class="app-calculator">
+    <h1>Kalkulator</h1>
+
+    <form [formGroup]="form">
+        <mat-grid-list cols="2" rowHeight="5rem">
+            <mat-grid-tile colspan="2">
+                <mat-form-field>
+                    <mat-label>Pomiar glukozy z krwi</mat-label>
+                    <input
+                        matInput
+                        placeholder="Glukoza"
+                        formControlName="glucose"
+                    />
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="2">
+                <mat-form-field>
+                    <mat-label>Korekta</mat-label>
+                    <input
+                        matInput
+                        disabled
+                        placeholder="Korekta"
+                        [value]="correction || ''"
+                    />
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Ilość wymienników WW/KE</mat-label>
+                    <input
+                        matInput
+                        placeholder="WW/KE"
+                        formControlName="wwke"
+                    />
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Bolus</mat-label>
+                    <input
+                        matInput
+                        disabled
+                        placeholder="Bolus"
+                        [value]="wwke_bolus || ''"
+                    />
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Ilość wymienników WBT/KE</mat-label>
+                    <input
+                        matInput
+                        placeholder="WTB/KE"
+                        formControlName="wbtke"
+                    />
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Bolus</mat-label>
+                    <input
+                        matInput
+                        disabled
+                        placeholder="Bolus"
+                        [value]="wbtke_bolus || ''"
+                    />
+                </mat-form-field>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</section>
